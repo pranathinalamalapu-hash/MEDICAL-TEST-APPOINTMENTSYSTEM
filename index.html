@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Test Appointment Scheduler | Healthcare Scheduling Solution</title>
+  <meta name="description" content="Smart medical test appointment scheduling for hospitals, diagnostic centers, clinics and laboratories. Optimize test duration, room availability, patient constraints and clinical priority.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Medical Test Appointment Scheduler | Healthcare Scheduling Solution">
+  <meta property="og:description" content="Schedule diagnostic tests efficiently while considering patient availability, test duration, room availability and appointment priority.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Font Awesome Icons for Crisp Healthcare Symbols -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       1. STICKY NAVBAR
+       ========================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo-group" aria-label="MedSchedule Home">
+        <img src="assets/favicon.svg" alt="MedSchedule Logo" class="brand-icon" width="36" height="36">
+        <div class="brand-titles">
+          <span class="brand-name">Med<span>Schedule</span></span>
+          <span class="brand-subtitle" data-config="BUSINESS_TAGLINE">Smart Medical Test Scheduling</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav role="navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#scheduler" class="nav-link">Scheduler</a></li>
+          <li><a href="#algorithm-intelligence" class="nav-link">Algorithms</a></li>
+          <li><a href="#ai-tools" class="nav-link">AI Tools</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="nav-cta-group">
+        <a href="#lead-capture" class="btn btn-primary">Book a Demo</a>
+        <a href="#" class="btn btn-whatsapp btn-contact-whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ==========================================================================
+         2. HERO SECTION
+         ========================================================================== -->
+    <section id="home" class="hero-section" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-tag">
+              <i class="fas fa-microchip"></i> Algorithmic Diagnostic Scheduling Platform
+            </div>
+            <h1 id="hero-title" class="hero-headline">
+              Smarter Medical Test Scheduling for <span>Modern Healthcare</span>
+            </h1>
+            <p class="hero-subheading">
+              Schedule diagnostic tests efficiently while considering patient availability, test duration, room availability and appointment priority.
+            </p>
+            <div class="hero-cta-actions">
+              <a href="#lead-capture" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> Book a Demo
+              </a>
+              <a href="#scheduler" class="btn btn-secondary">
+                <i class="fas fa-sliders"></i> Try the Scheduler
+              </a>
+            </div>
+            <div class="hero-trust-bar">
+              <div class="trust-item"><i class="fas fa-check-circle"></i> Zero Double Bookings</div>
+              <div class="trust-item"><i class="fas fa-check-circle"></i> Priority-Aware</div>
+              <div class="trust-item"><i class="fas fa-check-circle"></i> Multi-Room Optimization</div>
+            </div>
+          </div>
+
+          <!-- Hero Visual: Modern Scheduling Dashboard Mockup -->
+          <div class="hero-mockup-wrapper">
+            <div class="hero-mockup-card">
+              <div class="mockup-header-bar">
+                <div class="mockup-header-title">
+                  <span class="mockup-live-indicator"></span>
+                  Today's Scheduled Appointments
+                </div>
+                <span class="mockup-demo-badge">Interactive Demo Data</span>
+              </div>
+              <div class="mockup-appointments-list">
+                <!-- Sample 1 -->
+                <div class="mockup-appt-item">
+                  <div class="mockup-item-left">
+                    <div class="mockup-item-icon"><i class="fas fa-brain"></i></div>
+                    <div class="mockup-item-details">
+                      <strong>MRI Brain</strong>
+                      <span>09:00 - 09:45 (45 min)</span>
+                    </div>
+                  </div>
+                  <div class="mockup-item-right">
+                    <span class="mockup-room-name">MRI Room 1</span>
+                    <span class="badge badge-high">HIGH</span>
+                  </div>
+                </div>
+
+                <!-- Sample 2 -->
+                <div class="mockup-appt-item">
+                  <div class="mockup-item-left">
+                    <div class="mockup-item-icon"><i class="fas fa-lungs"></i></div>
+                    <div class="mockup-item-details">
+                      <strong>CT Chest</strong>
+                      <span>10:00 - 10:30 (30 min)</span>
+                    </div>
+                  </div>
+                  <div class="mockup-item-right">
+                    <span class="mockup-room-name">CT Room 1</span>
+                    <span class="badge badge-normal">NORMAL</span>
+                  </div>
+                </div>
+
+                <!-- Sample 3 -->
+                <div class="mockup-appt-item">
+                  <div class="mockup-item-left">
+                    <div class="mockup-item-icon"><i class="fas fa-wave-square"></i></div>
+                    <div class="mockup-item-details">
+                      <strong>Ultrasound</strong>
+                      <span>11:00 - 11:30 (30 min)</span>
+                    </div>
+                  </div>
+                  <div class="mockup-item-right">
+                    <span class="mockup-room-name">Ultrasound Room</span>
+                    <span class="badge badge-routine">ROUTINE</span>
+                  </div>
+                </div>
+
+                <!-- Sample 4 -->
+                <div class="mockup-appt-item">
+                  <div class="mockup-item-left">
+                    <div class="mockup-item-icon"><i class="fas fa-x-ray"></i></div>
+                    <div class="mockup-item-details">
+                      <strong>X-Ray</strong>
+                      <span>12:00 - 12:15 (15 min)</span>
+                    </div>
+                  </div>
+                  <div class="mockup-item-right">
+                    <span class="mockup-room-name">X-Ray Room</span>
+                    <span class="badge badge-normal">NORMAL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mockup-footer-note">
+                <i class="fas fa-shield-alt text-teal"></i> Sample appointments shown for demonstration purposes. Not real patient records.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. PROBLEM SECTION
+         ========================================================================== -->
+    <section id="problem" class="section-wrapper bg-subtle" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-triangle-exclamation"></i> Healthcare Scheduling Challenges</span>
+          <h2 id="problem-title" class="section-title">Medical Test Scheduling Can Become Complex</h2>
+          <p class="section-subtitle">
+            Diagnostic facilities operate under tight resource bottlenecks. Coordinating varied test protocols, specialized rooms, patient transport, and emergency priorities manually creates friction and equipment downtime.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-door-open"></i></div>
+            <h4>Multiple Diagnostic Rooms</h4>
+            <p>MRIs, CT scanners, sonography, and X-ray suites have dedicated hardware requirements and cannot be swapped arbitrarily.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-clock"></i></div>
+            <h4>Different Test Durations</h4>
+            <p>Scans range from 15-minute radiographs to 60-minute multi-sequence spine MRIs, complicating fixed calendar grids.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-bell"></i></div>
+            <h4>Priority Patients</h4>
+            <p>STAT and critical clinical cases require immediate allocation without disrupting routine outpatient appointments.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-hand-holding-hand"></i></div>
+            <h4>Patient Availability</h4>
+            <p>Patients arrive with limited time windows, transport dependencies, and mandatory prep/fasting restrictions.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-ban"></i></div>
+            <h4>Room Conflicts</h4>
+            <p>Inadvertent overlaps waste expensive radiological equipment time and cause patient waiting room congestion.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-clone"></i></div>
+            <h4>Double Bookings</h4>
+            <p>Decentralized receptionist booking channels frequently trigger double-booked scanner slots.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-shuffle"></i></div>
+            <h4>Changing Schedules</h4>
+            <p>Emergency cases and procedure overruns cascade into day-long scheduling chaos if not dynamically managed.</p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-card-icon"><i class="fas fa-file-excel"></i></div>
+            <h4>Manual Coordination</h4>
+            <p>Spreadsheets, paper logs, and disparate phone messages consume hours of administrative staff time every day.</p>
+          </div>
+        </div>
+
+        <!-- Problem Synthesis Banner -->
+        <div class="solution-unification-banner">
+          <div class="banner-left">
+            <h3>One Unified Scheduling Workflow</h3>
+            <p>
+              The MedSchedule system brings patient requirements, diagnostic tests, rooms, time slots, and clinical priorities together into a single constraint-aware algorithmic dispatcher.
+            </p>
+          </div>
+          <div class="banner-right">
+            <a href="#solution" class="btn btn-primary">
+              <i class="fas fa-arrow-down"></i> Explore Our Solution
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SOLUTION SECTION
+         ========================================================================== -->
+    <section id="solution" class="section-wrapper" aria-labelledby="solution-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-teal"><i class="fas fa-lightbulb"></i> Architectural Solution</span>
+          <h2 id="solution-title" class="section-title">A Smarter Way to Schedule Diagnostic Tests</h2>
+          <p class="section-subtitle">
+            Our scheduling logic systematically verifies all multi-variable clinical constraints before recommending or locking an appointment slot.
+          </p>
+        </div>
+
+        <div class="solution-cards-grid">
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-user-clock"></i></div>
+            <h3>Patient Availability</h3>
+            <p>Respects customized patient time boundaries, arrival constraints, and travel availability to minimize missed test appointments.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-stopwatch"></i></div>
+            <h3>Test Duration</h3>
+            <p>Automatically enforces exact diagnostic scan lengths (15 to 60+ min) plus sanitization turnaround intervals.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-hospital-user"></i></div>
+            <h3>Room Availability</h3>
+            <p>Matches diagnostic procedures only to compatible equipment suites and tracks room availability in 15-minute increments.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-shield-virus"></i></div>
+            <h3>Appointment Priority</h3>
+            <p>Distinguishes URGENT, HIGH, NORMAL, and ROUTINE cases, ensuring urgent clinical orders secure prompt slot allocation.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-triangle-exclamation"></i></div>
+            <h3>Conflict Detection</h3>
+            <p>Mathematical overlap verification (<code>start1 &lt; end2 &amp;&amp; start2 &lt; end1</code>) prevents overlapping scanner reservations.</p>
+          </div>
+
+          <div class="solution-card">
+            <div class="solution-icon-box"><i class="fas fa-file-circle-check"></i></div>
+            <h3>Appointment Confirmation</h3>
+            <p>Generates structured appointment IDs, printable confirmation slips, and instant WhatsApp/Email digital delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. HOW IT WORKS
+         ========================================================================== -->
+    <section id="how-it-works" class="section-wrapper bg-subtle" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-network-wired"></i> Step-by-Step Dispatch</span>
+          <h2 id="how-it-works-title" class="section-title">How It Works</h2>
+          <p class="section-subtitle">
+            A frictionless, 5-step automated workflow from patient intake to verified diagnostic slot assignment.
+          </p>
+        </div>
+
+        <div class="steps-timeline-grid">
+          <div class="step-process-card">
+            <div class="step-number-badge">1</div>
+            <div class="step-icon-wrap"><i class="fas fa-user-plus"></i></div>
+            <h4>Step 1: Patient Enters</h4>
+            <p>Patient details, preferred appointment date, and available time windows are entered into the system.</p>
+          </div>
+
+          <div class="step-process-card">
+            <div class="step-number-badge">2</div>
+            <div class="step-icon-wrap"><i class="fas fa-notes-medical"></i></div>
+            <h4>Step 2: Select Test</h4>
+            <p>Doctor or receptionist selects the required diagnostic test (e.g. MRI, CT, Ultrasound, X-Ray) and clinical priority.</p>
+          </div>
+
+          <div class="step-process-card">
+            <div class="step-number-badge">3</div>
+            <div class="step-icon-wrap"><i class="fas fa-sliders"></i></div>
+            <h4>Step 3: Check Resources</h4>
+            <p>Engine queries equipment compatibility, procedure duration, and existing room bookings in real time.</p>
+          </div>
+
+          <div class="step-process-card">
+            <div class="step-number-badge">4</div>
+            <div class="step-icon-wrap"><i class="fas fa-calculator"></i></div>
+            <h4>Step 4: Algorithmic Logic</h4>
+            <p>Optimization logic filters collisions, scores candidate intervals, and presents the best feasible slot.</p>
+          </div>
+
+          <div class="step-process-card">
+            <div class="step-number-badge">5</div>
+            <div class="step-icon-wrap"><i class="fas fa-clipboard-check"></i></div>
+            <h4>Step 5: Confirmation</h4>
+            <p>Unique Appointment ID is generated; details can be printed, downloaded, or dispatched via WhatsApp / Email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. FEATURES SECTION
+         ========================================================================== -->
+    <section id="features" class="section-wrapper" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-teal"><i class="fas fa-cubes"></i> Core Capabilities</span>
+          <h2 id="features-title" class="section-title">Engineered for Clinical Precision</h2>
+          <p class="section-subtitle">
+            Essential tools designed to streamline radiological departments, imaging centers, and diagnostic clinics.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-calendar-check"></i></div>
+            <h4>Smart Scheduling</h4>
+            <p>Automated slot assignment using priority rules and contiguous time block matching.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-bell"></i></div>
+            <h4>Priority Management</h4>
+            <p>Four-tiered urgency classification (Urgent, High, Normal, Routine) for rapid triage.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-hospital"></i></div>
+            <h4>Room Availability</h4>
+            <p>Per-room equipment tracking preventing incompatible or concurrent assignments.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-hourglass-half"></i></div>
+            <h4>Test Duration Management</h4>
+            <p>Strict duration enforcement based on radiological protocols (15 to 60 minutes).</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-user-tag"></i></div>
+            <h4>Patient Availability</h4>
+            <p>Calculates intersections between facility operational hours and patient constraints.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-shield-halved"></i></div>
+            <h4>Conflict Detection</h4>
+            <p>Instant overlap rejection with clear administrative rationale for denied slots.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-chart-line"></i></div>
+            <h4>Appointment Dashboard</h4>
+            <p>Real-time visual schedule overview of ongoing scans across diagnostic suites.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-file-invoice"></i></div>
+            <h4>Appointment Confirmation</h4>
+            <p>Instant document generation with preparation instructions and reference codes.</p>
+          </div>
+
+          <div class="feature-box">
+            <div class="feature-box-icon"><i class="fas fa-chart-pie"></i></div>
+            <h4>Scheduling Analytics</h4>
+            <p>Transparent room utilization metrics and modality throughput distributions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. INTERACTIVE SCHEDULER SECTION
+         ========================================================================== -->
+    <section id="scheduler" class="section-wrapper bg-subtle" aria-labelledby="scheduler-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-terminal"></i> Live Demonstration</span>
+          <h2 id="scheduler-title" class="section-title">Try the Medical Test Scheduler</h2>
+          <p class="section-subtitle">
+            Experience a simplified demonstration of how our scheduling engine handles test durations, equipment suites, and priority constraints.
+          </p>
+        </div>
+
+        <div class="scheduler-layout-grid">
+          <!-- Form Card -->
+          <div class="scheduler-form-card">
+            <div class="card-header-bar">
+              <div class="card-header-title">
+                <i class="fas fa-calendar-plus text-teal"></i> Schedule a Diagnostic Test
+              </div>
+              <span class="badge badge-normal">Interactive Demo</span>
+            </div>
+            
+            <form id="scheduler-form" class="form-body-padded">
+              <!-- Patient Name -->
+              <div class="form-field">
+                <label for="sched-patient-name"><i class="fas fa-user"></i> Patient Name *</label>
+                <input type="text" id="sched-patient-name" placeholder="e.g. Johnathan Smith" value="Claire Sterling (Demo)" required>
+                <small>Enter a demo patient name for slot assignment.</small>
+              </div>
+
+              <!-- Diagnostic Test -->
+              <div class="form-field">
+                <label for="sched-test"><i class="fas fa-notes-medical"></i> Diagnostic Test *</label>
+                <select id="sched-test" required>
+                  <option value="mri-brain" selected>MRI Brain — 45 minutes (MRI Suite)</option>
+                  <option value="mri-spine">MRI Spine — 60 minutes (MRI Suite)</option>
+                  <option value="ct-chest">CT Chest — 30 minutes (CT Suite)</option>
+                  <option value="ct-head">CT Head — 30 minutes (CT Suite)</option>
+                  <option value="us-abdomen">Ultrasound Abdomen — 30 minutes (US Suite)</option>
+                  <option value="xray-chest">X-Ray Chest — 15 minutes (X-Ray Suite)</option>
+                </select>
+              </div>
+
+              <!-- Priority -->
+              <div class="form-field">
+                <label for="sched-priority"><i class="fas fa-flag"></i> Clinical Priority *</label>
+                <select id="sched-priority" required>
+                  <option value="URGENT">URGENT (Critical / Immediate Triage)</option>
+                  <option value="HIGH" selected>HIGH (Earliest Feasible Opening)</option>
+                  <option value="NORMAL">NORMAL (Standard Outpatient)</option>
+                  <option value="ROUTINE">ROUTINE (Elective / Monitoring)</option>
+                </select>
+              </div>
+
+              <!-- Date & Preferred Time -->
+              <div class="form-group-grid">
+                <div class="form-field">
+                  <label for="sched-date"><i class="fas fa-calendar-day"></i> Preferred Date *</label>
+                  <input type="date" id="sched-date" required>
+                </div>
+                <div class="form-field">
+                  <label for="sched-time"><i class="fas fa-clock"></i> Preferred Time *</label>
+                  <input type="time" id="sched-time" value="10:00" step="900" required>
+                  <small>15-minute increments</small>
+                </div>
+              </div>
+
+              <!-- Patient Availability Boundaries -->
+              <div class="form-group-grid">
+                <div class="form-field">
+                  <label for="sched-avail-from"><i class="fas fa-hourglass-start"></i> Available From *</label>
+                  <input type="time" id="sched-avail-from" value="08:30" step="900" required>
+                </div>
+                <div class="form-field">
+                  <label for="sched-avail-until"><i class="fas fa-hourglass-end"></i> Available Until *</label>
+                  <input type="time" id="sched-avail-until" value="17:00" step="900" required>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-search"></i> Find Available Slot
+              </button>
+            </form>
+          </div>
+
+          <!-- Result Card -->
+          <div class="scheduler-output-card">
+            <div class="card-header-bar">
+              <div class="card-header-title">
+                <i class="fas fa-clipboard-check text-teal"></i> Recommended Slot
+              </div>
+              <span id="slot-candidate-counter" class="badge badge-normal">Awaiting Input</span>
+            </div>
+
+            <!-- Empty placeholder before search -->
+            <div id="scheduler-empty-state" class="scheduler-empty-state">
+              <i class="fas fa-calendar-alt"></i>
+              <h4>No Slot Evaluated Yet</h4>
+              <p>Configure patient constraints on the left and click <strong>"Find Available Slot"</strong> to run algorithmic compatibility matching.</p>
+            </div>
+
+            <!-- Recommended Appointment Result Box -->
+            <div id="scheduler-result-card" class="recommended-result-card" style="display: none;">
+              <div class="rec-status-banner">
+                <span><i class="fas fa-circle-check"></i> RECOMMENDED APPOINTMENT</span>
+                <span class="badge badge-routine">AVAILABLE</span>
+              </div>
+
+              <div class="rec-fields-list">
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Patient</span>
+                  <span class="rec-field-val" id="res-patient">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Diagnostic Test</span>
+                  <span class="rec-field-val" id="res-test">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Date</span>
+                  <span class="rec-field-val" id="res-date">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Assigned Time</span>
+                  <span class="rec-field-val text-teal" id="res-time">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Duration</span>
+                  <span class="rec-field-val" id="res-duration">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Room / Equipment</span>
+                  <span class="rec-field-val" id="res-room">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Priority Level</span>
+                  <span class="rec-field-val" id="res-priority">--</span>
+                </div>
+                <div class="rec-field-item">
+                  <span class="rec-field-label">Status</span>
+                  <span class="rec-field-val" style="color: #10b981;">AVAILABLE</span>
+                </div>
+              </div>
+
+              <!-- Actions -->
+              <div class="rec-action-buttons">
+                <div class="rec-buttons-row">
+                  <button type="button" class="btn btn-primary" id="btn-confirm-appointment">
+                    <i class="fas fa-check-circle"></i> Confirm Appointment
+                  </button>
+                  <button type="button" class="btn btn-secondary" id="btn-try-another-slot">
+                    <i class="fas fa-rotate"></i> Try Another Slot
+                  </button>
+                </div>
+              </div>
+
+              <!-- Conflict Explanations Log -->
+              <div id="conflict-explanations-list" class="conflict-explanations-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==========================================================================
+             27. INTERACTIVE SCHEDULING TIMELINE
+             ========================================================================== -->
+        <div class="timeline-component-box">
+          <div class="section-header" style="margin-bottom: 1.5rem; text-align: left;">
+            <span class="section-tag tag-teal"><i class="fas fa-chart-gantt"></i> Interactive Equipment Timeline</span>
+            <h3 style="font-size: 1.5rem; font-weight: 800; margin-top: 0.25rem;">Diagnostic Suite Capacity & Availability</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+              Visual overview of booked exams, available free intervals, and candidate recommended slots across all hospital rooms.
+            </p>
+          </div>
+          <div id="timeline-container"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. ALGORITHM INTELLIGENCE SECTION
+         ========================================================================== -->
+    <section id="algorithm-intelligence" class="section-wrapper" aria-labelledby="algo-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-brain"></i> Hackathon Algorithmic Architecture</span>
+          <h2 id="algo-title" class="section-title">Algorithmic Intelligence Behind the Scheduler</h2>
+          <p class="section-subtitle">
+            Multiple algorithmic paradigms can be applied to different scheduling, optimization, and resource-allocation challenges.
+          </p>
+        </div>
+
+        <div class="algo-disclaimer-note">
+          <i class="fas fa-circle-info fa-lg"></i>
+          <div>
+            <strong>Algorithmic Integrity Note:</strong> Different algorithmic paradigms are utilized for distinct operational scenarios (e.g., immediate slot assignment, daily batch partitioning, multi-resource conflict resolution, and global idle-time optimization) rather than being falsely claimed for every single operation.
+          </div>
+        </div>
+
+        <!-- Six Paradigms Grid -->
+        <div id="algorithm-cards-grid" class="algorithm-cards-grid">
+          <!-- Dynamically populated by js/algorithms.js with Greedy, Divide & Conquer, DP, Backtracking, Branch & Bound, and Graph -->
+        </div>
+
+        <!-- Hackathon & Documentation Section -->
+        <div id="hackathon-docs" class="hackathon-wrapper">
+          <div class="section-header" style="margin-bottom: 1.5rem; text-align: left;">
+            <span class="section-tag tag-teal"><i class="fas fa-book-bookmark"></i> Hackathon / Technical Dossier</span>
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-top: 0.25rem;">Project & Algorithm Overview</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted);">
+              Comprehensive technical breakdown aligned with standard problem-solving documentation.
+            </p>
+          </div>
+
+          <div class="hackathon-tabs-bar">
+            <button type="button" class="hackathon-tab-btn active" data-tab="problem">1. Problem Statement & Objectives</button>
+            <button type="button" class="hackathon-tab-btn" data-tab="approach">2. Algorithmic Paradigms</button>
+            <button type="button" class="hackathon-tab-btn" data-tab="complexity">3. Complexity Analysis</button>
+            <button type="button" class="hackathon-tab-btn" data-tab="results">4. Implementation & Results</button>
+            <button type="button" class="hackathon-tab-btn" data-tab="scope">5. Future Scope & References</button>
+          </div>
+
+          <!-- Tab 1 -->
+          <div id="tab-problem" class="hackathon-tab-pane active">
+            <div class="doc-section-card">
+              <h4><i class="fas fa-bullseye"></i> 1. Problem Statement & Objectives</h4>
+              <p>
+                In diagnostic healthcare facilities, medical imaging equipment represents major capital expenditures whose under-utilization or schedule congestion degrades patient outcomes and increases operating costs. The scheduling challenge requires assigning patient diagnostic tests \(T\) into available time intervals \([S, E)\) across rooms \(R\) while adhering to:
+              </p>
+              <ul>
+                <li><strong>Equipment Compatibility:</strong> Test \(T_i\) can only execute in compliant room \(R_k \in Compatible(T_i)\).</li>
+                <li><strong>Duration Constraints:</strong> The assigned slot interval must satisfy \(E_i - S_i \ge Duration(T_i)\).</li>
+                <li><strong>Non-Overlapping Invariant:</strong> For any two appointments \(i, j\) assigned to the same room \(R_k\), their time intervals must not conflict: \(\neg (S_i < E_j \land S_j < E_i)\).</li>
+                <li><strong>Patient Availability:</strong> The scheduled interval must fall entirely within the patient's arrival and departure bounds \([AvailFrom_i, AvailUntil_i]\).</li>
+                <li><strong>Clinical Priority Hierarchy:</strong> STAT/Urgent requests must take precedence over routine monitoring.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div id="tab-approach" class="hackathon-tab-pane">
+            <div class="doc-section-card">
+              <h4><i class="fas fa-diagram-project"></i> 2. Proposed Algorithmic Approaches</h4>
+              <p>
+                The project demonstrates 6 foundational paradigms mapped to their natural clinical operations:
+              </p>
+              <ul>
+                <li><strong>Greedy:</strong> Immediate online assignment of incoming outpatient bookings. Sorts queue by priority weight and assigns the earliest compatible non-conflicting slot.</li>
+                <li><strong>Divide & Conquer:</strong> Large hospital networks partition scheduling problems hierarchically: first by Date, then by Diagnostic Modality (MRI, CT, Ultrasound). Partitions are scheduled concurrently and unified.</li>
+                <li><strong>Dynamic Programming:</strong> Weighted interval optimization. Solves \(OPT(j) = \max(w_j + OPT(p(j)), OPT(j-1))\) to maximize room utilization and minimize idle gaps.</li>
+                <li><strong>Backtracking:</strong> Recursive constraint satisfaction for tightly coupled multi-procedure bookings (e.g. contrast CT followed immediately by ultrasound), with systematic rollbacks upon conflict.</li>
+                <li><strong>Branch & Bound:</strong> Evaluates permutations of multi-room schedules, pruning subtrees whose lower-bound cost exceeds the known best feasible schedule.</li>
+                <li><strong>Graph Representation:</strong> Models tests as vertices, room affinity as bipartite edges, and overlapping requests as conflict edges (Interval Graph coloring to compute minimum rooms).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div id="tab-complexity" class="hackathon-tab-pane">
+            <div class="doc-section-card">
+              <h4><i class="fas fa-calculator"></i> 3. Algorithmic Complexity Comparison</h4>
+              <div class="complexity-table-wrapper">
+                <table class="complexity-table">
+                  <thead>
+                    <tr>
+                      <th>Algorithm Paradigm</th>
+                      <th>Best Case</th>
+                      <th>Average Case</th>
+                      <th>Worst Case</th>
+                      <th>Space Complexity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Greedy Allocation</strong></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(N log N + N · M)</code></td>
+                      <td><code>O(N · M · S)</code></td>
+                      <td><code>O(N + M)</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Divide & Conquer</strong></td>
+                      <td><code>O(K · (N/K log(N/K)))</code></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(N)</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Dynamic Programming</strong></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(N²)</code></td>
+                      <td><code>O(N)</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Backtracking</strong></td>
+                      <td><code>O(N · M)</code></td>
+                      <td><code>O(M^N with pruning)</code></td>
+                      <td><code>O(M^N)</code></td>
+                      <td><code>O(N) stack</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Branch & Bound</strong></td>
+                      <td><code>O(N log N)</code></td>
+                      <td><code>O(B^d pruned)</code></td>
+                      <td><code>O(M^N)</code></td>
+                      <td><code>O(B · d) PQ</code></td>
+                    </tr>
+                    <tr>
+                      <td><strong>Interval Graph</strong></td>
+                      <td><code>O(V + E)</code></td>
+                      <td><code>O(V + E)</code></td>
+                      <td><code>O(V · E)</code></td>
+                      <td><code>O(V + E)</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <small class="text-muted">Where \(N\) = number of appointments, \(M\) = rooms, \(S\) = 15-min intervals, \(V\) = vertices, \(E\) = conflict edges.</small>
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div id="tab-results" class="hackathon-tab-pane">
+            <div class="doc-section-card">
+              <h4><i class="fas fa-square-poll-vertical"></i> 4. Implementation & Results</h4>
+              <p>
+                The frontend demo implements deterministic constraint checking in 15-minute discrete increments across 5 simulated diagnostic suites (2 MRI, 1 CT, 1 Ultrasound, 1 X-Ray). Test cases verified:
+              </p>
+              <ul>
+                <li><strong>Overlapping Conflict Test:</strong> Verified that an MRI request between 09:00 - 09:45 in MRI Room 1 is correctly rejected with detailed conflict explanation when occupied.</li>
+                <li><strong>Duration Fitting:</strong> Verified that 60-minute tests correctly reject 30-minute free gaps.</li>
+                <li><strong>Priority Reordering:</strong> Confirmed that URGENT priority requests claim earliest available morning slots.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tab 5 -->
+          <div id="tab-scope" class="hackathon-tab-pane">
+            <div class="doc-section-card">
+              <h4><i class="fas fa-compass"></i> 5. Future Scope & References</h4>
+              <p>
+                Future extensions include bidirectional HL7/FHIR EHR synchronization, machine learning-driven patient no-show likelihood modeling, and reinforcement learning for dynamic slot overbooking policies.
+              </p>
+              <ul>
+                <li>Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). <em>Introduction to Algorithms</em>. MIT Press.</li>
+                <li>Kleinberg, J., & Tardos, É. (2006). <em>Algorithm Design</em>. Pearson.</li>
+                <li>Gupta, D., & Denton, B. (2008). <em>Appointment scheduling in health care: Challenges and opportunities</em>. IIE Transactions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. AI TOOLS SECTION
+         ========================================================================== -->
+    <section id="ai-tools" class="section-wrapper bg-subtle" aria-labelledby="ai-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-teal"><i class="fas fa-wand-magic-sparkles"></i> AI Demonstrations</span>
+          <h2 id="ai-title" class="section-title">AI-Powered Healthcare Scheduling Tools</h2>
+          <p class="section-subtitle">
+            Demonstrating administrative scheduling assistance, patient prep guidance, conflict explanation, and facility architecture recommendations.
+          </p>
+        </div>
+
+        <div class="ai-tools-tabs-grid">
+          <!-- Tool 1: AI Scheduling Assistant -->
+          <div class="ai-tool-card">
+            <div class="ai-tool-header">
+              <h3><i class="fas fa-brain"></i> AI Scheduling Assistant</h3>
+              <span class="ai-demo-tag">Demo AI</span>
+            </div>
+            <div class="ai-tool-body">
+              <p class="desc-para">
+                Enter a clinical scheduling request in plain English. The AI extracts the diagnostic modality, priority, and preferred window, and auto-populates the scheduler form.
+              </p>
+              <div class="form-field">
+                <label for="ai-prompt-input">Requirement Description:</label>
+                <textarea id="ai-prompt-input" rows="2" placeholder="e.g. I need to schedule an urgent MRI for a patient tomorrow morning"></textarea>
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-ai-analyze-prompt">
+                <i class="fas fa-microchip"></i> Analyze Requirement
+              </button>
+              <div id="ai-parsed-result" style="display: none;"></div>
+            </div>
+          </div>
+
+          <!-- Tool 2: AI Appointment Assistant (Chatbot) -->
+          <div class="ai-tool-card">
+            <div class="ai-tool-header">
+              <h3><i class="fas fa-comments"></i> AI Appointment Assistant</h3>
+              <span class="ai-demo-tag">Demo AI</span>
+            </div>
+            <div class="ai-tool-body">
+              <p class="desc-para">
+                Ask administrative and preparation questions regarding appointments. <em>(Does not provide medical diagnoses).</em>
+              </p>
+              <div class="ai-chat-window" id="ai-chat-messages">
+                <div class="chat-bubble chat-assistant">
+                  <div class="chat-bubble-avatar"><i class="fas fa-robot text-teal"></i></div>
+                  <div class="chat-bubble-content">
+                    Hello! I am your administrative scheduling assistant. How can I help you regarding appointment preparation, required documents, or scheduling guidelines?
+                  </div>
+                </div>
+              </div>
+              <div class="quick-prompts-bar">
+                <button type="button" class="quick-chat-prompt">What should I prepare before an MRI?</button>
+                <button type="button" class="quick-chat-prompt">How does appointment scheduling work?</button>
+                <button type="button" class="quick-chat-prompt">What information is required?</button>
+              </div>
+              <div class="chat-input-row">
+                <input type="text" id="ai-chat-input" placeholder="Type an administrative question...">
+                <button type="button" class="btn btn-primary-sm" id="btn-ai-chat-send">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional AI Tools Row: Summary & Lead Assistant -->
+        <div class="ai-tools-tabs-grid">
+          <!-- Tool 3 & 4: Summary & Conflict Explainer -->
+          <div class="ai-tool-card">
+            <div class="ai-tool-header">
+              <h3><i class="fas fa-file-lines"></i> AI Schedule Summary & Conflict Explainer</h3>
+              <span class="ai-demo-tag">Demo AI</span>
+            </div>
+            <div class="ai-tool-body">
+              <p class="desc-para">
+                Generates a clean natural-language briefing of your currently evaluated or confirmed test booking for patient communications.
+              </p>
+              <button type="button" class="btn btn-secondary" id="btn-gen-ai-summary">
+                <i class="fas fa-wand-sparkles"></i> Generate Natural Language Summary
+              </button>
+              <div id="ai-summary-output" style="display: none; margin-top: 1rem;"></div>
+            </div>
+          </div>
+
+          <!-- Tool 5: AI Enterprise Lead Recommender -->
+          <div class="ai-tool-card">
+            <div class="ai-tool-header">
+              <h3><i class="fas fa-building-user"></i> Enterprise Workflow Fit Advisor</h3>
+              <span class="ai-demo-tag">Demo AI</span>
+            </div>
+            <div class="ai-tool-body">
+              <p class="desc-para">
+                Discover which algorithmic scheduling configuration best matches your facility's operational scale.
+              </p>
+              <div class="form-group-grid">
+                <div class="form-field">
+                  <label for="fit-org-type">Organization Type:</label>
+                  <select id="fit-org-type">
+                    <option value="Hospital">Hospital</option>
+                    <option value="Diagnostic Center" selected>Diagnostic Center</option>
+                    <option value="Imaging Center">Imaging Center</option>
+                    <option value="Clinic">Clinic</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="fit-room-count">Number of Suites:</label>
+                  <input type="number" id="fit-room-count" value="4" min="1" max="50">
+                </div>
+              </div>
+              <div class="form-group-grid">
+                <div class="form-field">
+                  <label for="fit-volume">Daily Tests:</label>
+                  <input type="number" id="fit-volume" value="40" min="5" max="500">
+                </div>
+                <div class="form-field">
+                  <label for="fit-challenge">Main Challenge:</label>
+                  <select id="fit-challenge">
+                    <option value="double_bookings">Double Bookings & Overlaps</option>
+                    <option value="idle_gaps">Idle Scanner Downtime</option>
+                    <option value="urgent_delays">Urgent Priority Bottlenecks</option>
+                  </select>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-ai-fit-analyze">
+                <i class="fas fa-chart-simple"></i> Evaluate Architectural Recommendation
+              </button>
+              <div id="ai-fit-result" style="display: none; margin-top: 1rem;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         17. ANALYTICS DASHBOARD DEMO
+         ========================================================================== -->
+    <section id="analytics-dashboard" class="section-wrapper" aria-labelledby="analytics-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-chart-line"></i> Operations Monitor</span>
+          <h2 id="analytics-title" class="section-title">Radiology Operations Analytics</h2>
+          <p class="section-subtitle">
+            Real-time facility throughput and equipment utilization metrics computed from scheduled bookings.
+          </p>
+        </div>
+
+        <div class="analytics-dashboard-wrapper">
+          <div class="analytics-top-metrics">
+            <div class="metric-card">
+              <span class="metric-card-label">Today's Appointments</span>
+              <div class="metric-card-value" id="stat-total-appts">--</div>
+              <span class="metric-subtext">Active bookings</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card-label">Available Suites</span>
+              <div class="metric-card-value" id="stat-active-rooms">--</div>
+              <span class="metric-subtext">Operating equipment</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card-label">High / STAT Priority</span>
+              <div class="metric-card-value" id="stat-urgent-share">--</div>
+              <span class="metric-subtext">Urgent triage cases</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-card-label">Facility Utilization</span>
+              <div class="metric-card-value" id="stat-room-util">--</div>
+              <span class="metric-subtext">Capacity allocated</span>
+            </div>
+          </div>
+
+          <div class="charts-grid-layout">
+            <!-- Test distribution -->
+            <div class="chart-panel-card">
+              <h4><i class="fas fa-chart-simple text-teal"></i> Bookings by Diagnostic Test</h4>
+              <div id="chart-test-distribution"></div>
+            </div>
+
+            <!-- Priority Donut -->
+            <div class="chart-panel-card">
+              <h4><i class="fas fa-chart-pie text-teal"></i> Appointments by Priority</h4>
+              <div id="chart-priority-distribution"></div>
+            </div>
+
+            <!-- Room Utilization Progress -->
+            <div class="chart-panel-card">
+              <h4><i class="fas fa-door-closed text-teal"></i> Suite Utilization Rate</h4>
+              <div id="chart-room-utilization"></div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 1.5rem; font-size: 0.8rem; color: var(--text-muted);">
+            <i class="fas fa-shield-alt text-teal"></i> Sample Dashboard Data — Values recalculate automatically as new demo appointments are confirmed.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         13 & 25. LEAD GENERATION SECTION
+         ========================================================================== -->
+    <section id="lead-capture" class="section-wrapper bg-subtle" aria-labelledby="lead-title">
+      <div class="container">
+        <div class="lead-capture-box">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="section-tag"><i class="fas fa-building-circle-check"></i> Enterprise Adaptation</span>
+            <h2 id="lead-title" class="section-title">Want This Scheduling Solution for Your Organization?</h2>
+            <p class="section-subtitle">
+              Let's discuss how the scheduler can be adapted to your clinic, diagnostic center, hospital, or laboratory workflow.
+            </p>
+          </div>
+
+          <div id="lead-form-alert" class="alert-box"></div>
+
+          <form id="lead-capture-form">
+            <div class="lead-form-grid">
+              <div class="form-field">
+                <label for="lead-name"><i class="fas fa-user"></i> Full Name *</label>
+                <input type="text" id="lead-name" placeholder="Dr. Sarah Mitchell" required>
+              </div>
+
+              <div class="form-field">
+                <label for="lead-org"><i class="fas fa-hospital"></i> Organization Name *</label>
+                <input type="text" id="lead-org" placeholder="Metro Diagnostic & Imaging Center" required>
+              </div>
+
+              <div class="form-field">
+                <label for="lead-email"><i class="fas fa-envelope"></i> Official Email *</label>
+                <input type="email" id="lead-email" placeholder="sarah@metroimaging.org" required>
+              </div>
+
+              <div class="form-field">
+                <label for="lead-phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                <input type="tel" id="lead-phone" placeholder="+91 98765 43210" required>
+              </div>
+
+              <div class="form-field">
+                <label for="lead-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Number</label>
+                <input type="tel" id="lead-whatsapp" placeholder="+91 98765 43210">
+              </div>
+
+              <div class="form-field">
+                <label for="lead-org-type"><i class="fas fa-building"></i> Organization Type *</label>
+                <select id="lead-org-type" required>
+                  <option value="Hospital">Hospital</option>
+                  <option value="Diagnostic Center" selected>Diagnostic Center</option>
+                  <option value="Laboratory">Laboratory</option>
+                  <option value="Imaging Center">Imaging Center</option>
+                  <option value="Clinic">Clinic</option>
+                  <option value="Healthcare Startup">Healthcare Startup</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="lead-rooms"><i class="fas fa-door-open"></i> Number of Diagnostic Suites</label>
+                <input type="text" id="lead-rooms" placeholder="e.g. 4 rooms (2 MRI, 1 CT, 1 X-Ray)">
+              </div>
+
+              <div class="form-field">
+                <label for="lead-volume"><i class="fas fa-chart-simple"></i> Approx. Daily Appointments</label>
+                <input type="text" id="lead-volume" placeholder="e.g. 50-100 tests per day">
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-top: 1rem;">
+              <label for="lead-challenge"><i class="fas fa-bullseye"></i> Main Scheduling Challenge</label>
+              <select id="lead-challenge">
+                <option value="Double bookings and overlap conflicts">Double bookings and overlap conflicts</option>
+                <option value="Long patient wait times and room idle gaps">Long patient wait times and room idle gaps</option>
+                <option value="Triage priority coordination between emergency and outpatient">Triage priority coordination between emergency and outpatient</option>
+                <option value="Multi-room equipment routing">Multi-room equipment routing</option>
+                <option value="Integration with existing hospital EHR/PACS">Integration with existing hospital EHR/PACS</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="lead-message"><i class="fas fa-message"></i> Message / Specific Requirements</label>
+              <textarea id="lead-message" rows="3" placeholder="Tell us about your diagnostic facility, workflow constraints, or custom integration needs..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.9rem; font-size: 1.05rem;">
+              <i class="fas fa-paper-plane"></i> Request a Demo
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         15. CONTACT SECTION
+         ========================================================================== -->
+    <section id="contact" class="section-wrapper" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-teal"><i class="fas fa-comments"></i> Direct Channels</span>
+          <h2 id="contact-title" class="section-title">Let's Talk About Your Scheduling Workflow</h2>
+          <p class="section-subtitle">
+            Reach out directly to discuss your clinical facility's scheduling architecture.
+          </p>
+        </div>
+
+        <div class="contact-channels-grid">
+          <!-- WhatsApp -->
+          <div class="contact-channel-card">
+            <div class="channel-icon-circle circle-wa"><i class="fab fa-whatsapp"></i></div>
+            <h4>WhatsApp Us</h4>
+            <p class="channel-info-text">Instant chat with our solution specialists</p>
+            <a href="#" class="btn btn-whatsapp btn-contact-whatsapp" style="width: 100%;">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="contact-channel-card">
+            <div class="channel-icon-circle circle-mail"><i class="fas fa-envelope"></i></div>
+            <h4>Email Us</h4>
+            <p class="channel-info-text" data-config="BUSINESS_EMAIL">your@email.com</p>
+            <a href="#" class="btn btn-primary btn-contact-email" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Email
+            </a>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-channel-card">
+            <div class="channel-icon-circle circle-phone"><i class="fas fa-phone"></i></div>
+            <h4>Call Us</h4>
+            <p class="channel-info-text" data-config="PHONE_NUMBER">+91 XXXXXXXXXX</p>
+            <a href="#" class="btn btn-secondary btn-contact-phone" style="width: 100%;">
+              <i class="fas fa-phone"></i> Direct Call
+            </a>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="#lead-capture" class="btn btn-primary">
+            <i class="fas fa-calendar-check"></i> Or Schedule a Demo Presentation
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         16. FAQ SECTION
+         ========================================================================== -->
+    <section id="faq" class="section-wrapper bg-subtle" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag"><i class="fas fa-circle-question"></i> Common Questions</span>
+          <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Clear, concise answers regarding the Medical Test Appointment Scheduler.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>What is the Medical Test Appointment Scheduler?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-1" class="faq-panel">
+              <div class="faq-panel-content">
+                It is an intelligent diagnostic test scheduling solution that matches patients to compatible radiological suites (MRI, CT, Ultrasound, X-Ray) while respecting test duration, clinical priority, and room availability to prevent double bookings.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>Who can use it?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-2" class="faq-panel">
+              <div class="faq-panel-content">
+                The scheduler is built for hospitals, standalone diagnostic centers, imaging clinics, pathology laboratories, and healthcare administrators looking to replace manual booking spreadsheets with an automated, constraint-aware platform.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>How does the scheduler handle different test durations?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-3" class="faq-panel">
+              <div class="faq-panel-content">
+                Each diagnostic test has a defined clinical duration (e.g., 15 min for Chest X-Ray, 45 min for MRI Brain, 60 min for MRI Spine). The algorithm scans for contiguous time blocks that accommodate the full duration before locking a slot.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>How does it handle room availability?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-4" class="faq-panel">
+              <div class="faq-panel-content">
+                The system maps each procedure to its required equipment type. Two appointments in the same room are prevented from overlapping via the mathematical conflict condition: <code>start1 &lt; end2 &amp;&amp; start2 &lt; end1</code>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <span>How are appointment priorities handled?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-5" class="faq-panel">
+              <div class="faq-panel-content">
+                Appointments are categorized into URGENT, HIGH, NORMAL, and ROUTINE. The greedy dispatch engine processes higher-priority appointments first, assigning them the earliest feasible slot within patient availability windows.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-6">
+              <span>Can patients receive appointment details?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-6" class="faq-panel">
+              <div class="faq-panel-content">
+                Yes. Upon confirmation, the system creates a unique Appointment ID and enables instant download of an official confirmation text document, pre-formatted WhatsApp dispatch, email summary, and print-ready clinical slip.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-7">
+              <span>Can the system be customized?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-7" class="faq-panel">
+              <div class="faq-panel-content">
+                Yes. Diagnostic equipment suites, procedure duration catalogues, operational hours, and room buffering times can be easily customized to match any facility's exact physical floor plan.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-8">
+              <span>Can AI tools be integrated?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-8" class="faq-panel">
+              <div class="faq-panel-content">
+                Yes. The platform includes a dedicated AI service layer (`js/services/ai.js`) ready to connect with Google Gemini or OpenAI APIs for automated referral parsing, patient prep instructions, and schedule summarization.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-9">
+              <span>Can this be connected to an organization's existing workflow?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div id="faq-ans-9" class="faq-panel">
+              <div class="faq-panel-content">
+                Yes. The lead capture form and scheduling engine support REST webhooks, Formspree, EmailJS, Supabase, and can be extended to integrate with existing hospital EHR/HIS or PACS systems.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       31. FOOTER
+       ========================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <h3 data-config="BUSINESS_NAME">MedSchedule</h3>
+          <p data-config="BUSINESS_TAGLINE">Smart Medical Test Scheduling for Modern Healthcare Facilities.</p>
+          <div class="mt-3">
+            <a href="#lead-capture" class="btn btn-primary-sm">Book a Demo</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#scheduler">Scheduler Demo</a></li>
+            <li><a href="#algorithm-intelligence">Algorithms</a></li>
+            <li><a href="#ai-tools">AI Tools</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4>Contact Information</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-envelope text-teal"></i> <span data-config="BUSINESS_EMAIL">your@email.com</span></li>
+            <li><i class="fab fa-whatsapp text-teal"></i> <span data-config="WHATSAPP_NUMBER">+91 XXXXXXXXXX</span></li>
+            <li><i class="fas fa-phone text-teal"></i> <span data-config="PHONE_NUMBER">+91 XXXXXXXXXX</span></li>
+            <li><i class="fas fa-location-dot text-teal"></i> <span data-config="BUSINESS_LOCATION">Your City, India</span></li>
+            <li><i class="fas fa-clock text-teal"></i> <span data-config="BUSINESS_HOURS">Monday - Saturday, 9:00 AM - 6:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 <span data-config="BUSINESS_NAME">Your Business Name</span>. All rights reserved.
+        </div>
+        <div class="footer-disclaimer-note">
+          Demo website using sample appointment data. This system is not a medical diagnostic tool.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       11. APPOINTMENT CONFIRMATION MODAL (Dialog)
+       ========================================================================== -->
+  <div id="confirmation-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-confirm-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-confirm-title"><i class="fas fa-circle-check text-teal"></i> Appointment Confirmed</h3>
+        <button type="button" class="modal-close-btn" id="close-confirmation-modal" aria-label="Close dialog">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="confirmation-slip-preview">
+          <div class="slip-header-hero">
+            <div class="slip-check-icon"><i class="fas fa-check"></i></div>
+            <h4 style="font-size: 1.25rem; font-weight: 800;">Diagnostic Appointment Scheduled</h4>
+            <div class="slip-id-tag" id="modal-appt-id">MS-2026-XXXX</div>
+          </div>
+
+          <div class="slip-details-grid">
+            <div class="slip-field">
+              <span>Patient Name</span>
+              <strong id="modal-patient-name">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Diagnostic Test</span>
+              <strong id="modal-test-name">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Scheduled Date</span>
+              <strong id="modal-date">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Assigned Time</span>
+              <strong id="modal-time" class="text-teal">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Duration</span>
+              <strong id="modal-duration">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Diagnostic Suite</span>
+              <strong id="modal-room">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Priority Level</span>
+              <strong id="modal-priority">--</strong>
+            </div>
+            <div class="slip-field">
+              <span>Status</span>
+              <strong style="color: #10b981;">CONFIRMED</strong>
+            </div>
+          </div>
+
+          <div class="slip-demo-disclaimer">
+            <i class="fas fa-info-circle"></i> Demo Appointment — Not a Real Medical Booking.
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="delivery-actions-group">
+          <button type="button" class="btn btn-secondary" id="btn-delivery-download">
+            <i class="fas fa-download"></i> Download Slip
+          </button>
+          <a href="#" class="btn btn-whatsapp" id="btn-delivery-whatsapp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+          </a>
+          <a href="#" class="btn btn-primary" id="btn-delivery-email">
+            <i class="fas fa-envelope"></i> Email Details
+          </a>
+          <button type="button" class="btn btn-secondary" id="btn-delivery-print">
+            <i class="fas fa-print"></i> Print Slip
+          </button>
+          <button type="button" class="btn btn-secondary" id="btn-delivery-book-another">
+            <i class="fas fa-plus"></i> Book Another
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ALGORITHM DETAIL & COMPLEXITY MODAL
+       ========================================================================== -->
+  <div id="algo-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="algo-modal-title">
+    <div class="modal-card modal-card-lg">
+      <div class="modal-header">
+        <h3 id="algo-modal-title">Algorithmic Paradigm Detail</h3>
+        <button type="button" class="modal-close-btn" id="close-algo-modal" aria-label="Close dialog">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="algo-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Application Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/scheduler.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/algorithms.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/leadCapture.js"></script>
+  <script src="js/services/ai.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
